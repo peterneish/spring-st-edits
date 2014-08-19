@@ -2,10 +2,10 @@
   "nick": "springst_edits",
   "accounts": [
     {
-      "consumer_key": false,
-      "consumer_secret: false,
-      "access_token": false,
-      "access_token_secret": false,
+      "consumer_key": "",
+      "consumer_secret": "",
+      "access_token": "",
+      "access_token_secret": "",
       "template": "{{page}} Wikipedia article edited by {{name}} {{&url}}",
       "whitelist": {
         "English Wikipedia": {
