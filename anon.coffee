@@ -51,16 +51,16 @@ getConfig = (path) ->
     for account in config.accounts
       if typeof account.ranges == 'string'
         account.ranges = loadJson account.ranges
+      # override with environment vars if we have them
+      if process.env.CONSUMER_KEY
+        account.consumer_key = process.env.CONSUMER_KEY
+      if process.env.CONSUMER_SECRET
+        account.consumer_secret = process.env.CONSUMER_SECRET
+      if process.env.ACCESS_TOKEN
+        account.access_token = process.env.ACCESS_TOKEN
+      if process.env.ACCESS_TOKEN_SECRET
+        account.access_token_secret = process.env.ACCESS_TOKEN_SECRET
   console.log "loaded config from", path
-  # override with environment vars if we have them
-  if process.env.CONSUMER_KEY
-    config.consumer_key = process.env.CONSUMER_KEY
-  if process.env.CONSUMER_SECRET
-    config.consumer_secret = process.env.CONSUMER_SECRET
-  if process.env.ACCESS_TOKEN
-    config.access_token = process.env.ACCESS_TOKEN
-  if process.env.ACCESS_TOKEN_SECRET
-    config.access_token_secret = process.env.ACCESS_TOKEN_SECRET
   config
 
 loadJson = (path) ->
