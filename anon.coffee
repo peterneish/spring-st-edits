@@ -105,16 +105,16 @@ inspect = (account, edit) ->
   if edit.url
     if argv.verbose
       console.log edit.url
-    if account.whitelist and account.whitelist[edit.wikipedia] \
-        and account.whitelist[edit.wikipedia][edit.page]
-      status = getStatus edit, edit.user, account.template
-      tweet account, status, edit
-    else if account.ranges and edit.anonymous
+    if account.ranges and edit.anonymous
       for name, ranges of account.ranges
         if isIpInAnyRange edit.user, ranges
           status = getStatus edit, name, account.template
           tweet account, status, edit
-
+    else if account.whitelist and account.whitelist[edit.wikipedia] \
+        and account.whitelist[edit.wikipedia][edit.page]
+      status = getStatus edit, edit.user, account.template
+      tweet account, status, edit
+	  
 checkConfig = (config, error) ->
   if config.accounts
     async.each config.accounts, canTweet, error
