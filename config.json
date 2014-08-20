@@ -7,11 +7,10 @@
       "access_token": "",
       "access_token_secret": "",
       "template": "{{page}} Wikipedia article edited by {{name}} {{&url}}",
-	  "throttle": true,
+	  "throttle": false,
       "whitelist": {
         "English Wikipedia": {
-          "Tim Holding": true,
-		  "Jacinta Allan": true,
+          "Jacinta Allan": true,
           "Daniel Andrews": true,
           "Neil Angus": true,
           "Louise Asher": true,
