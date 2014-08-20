@@ -8,6 +8,11 @@
       "access_token_secret": "",
       "template": "{{page}} Wikipedia article edited by {{name}} {{&url}}",
 	  "throttle": false,
+      "ranges": {
+      	  "SpringSt Anon": [
+             ["203.16.24.0","203.16.24.255"]
+		  ]
+      },
       "whitelist": {
         "English Wikipedia": {
           "Jacinta Allan": true,
