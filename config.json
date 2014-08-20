@@ -9,7 +9,7 @@
       "template": "{{page}} Wikipedia article edited by {{name}} {{&url}}",
 	  "throttle": false,
       "ranges": {
-      	  "SpringSt Anon": [
+      	  "SpringSt_Anon": [
              ["203.16.24.0","203.16.24.255"]
 		  ]
       },
