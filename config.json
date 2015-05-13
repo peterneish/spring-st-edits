@@ -6,7 +6,7 @@
       "consumer_secret": "",
       "access_token": "",
       "access_token_secret": "",
-      "template": "{{page}} Wikipedia article edited by {{name}} {{&url}}",
+      "template": "{{page}} Wikipedia article edited by {{name}} {{&url}} #springst",
 	  "throttle": false,
       "ranges": {
       	  "SpringSt_Anon": [
